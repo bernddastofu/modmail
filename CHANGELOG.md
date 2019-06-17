@@ -4,6 +4,89 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+# [Unreleased]
+
+### Added 
+
+- Sponsors command that will list sponsors.
+
+### Changed
+- Channel names now can contain unicode characters.
+- Debug logs are now located in a unique file for each bot. (Internal change) 
+- Default cogs always appear first in the help command now.
+
+### Fixed
+- Editing notes now works, minor bug with edit command is fixed.
+- Bug in the `oauth` command where the response message fails to send when an ID is provided.
+- Plugin requirement installation now works in virtual environments
+
+
+# v2.24.1
+
+### Fixed
+
+Fixed a bug with branches and `plugin update`.
+
+# v2.24.0
+
+### Added
+
+Branch support for `plugin add` and in registry. Typically for developers.    
+
+# v2.23.0
+
+### Added 
+
+Added a "Mutual servers" field to the genesis embed if:
+a) The user is not in the main guild.
+b) The user shares more than 1 server with the bot.
+
+### Changed
+
+Notes taken using the `?note` command are now automatically pinned within the thread channel.
+
+# v2.22.0
+
+### Added
+
+Added a 🛑 reaction to the paginators to delete the embed.  
+
+### Fixed
+
+`?blocked` is now paginated using reactions. This fixes [#249](https://github.com/kyb3r/modmail/issues/249)
+
+# v2.21.0
+
+### Added 
+
+New `?plugin registry compact` command which shows a more compact view of all plugins.
+
+# v2.20.2
+
+### Plugin Registry
+
+Plugin developers can now make a PR to include their plugin in the `plugin registry` command.
+Add your plugin in the `plugins/registry.json` file in the main repository.
+
+### Changed
+
+`?debug` command now shows the most recent logs first. (Starts at the last page)
+
+# v2.20.1
+
+### What's new?
+
+  - New error message when using thread-only commands outside of threads.
+  - `?unnotify`, ability to undo `?notify`.
+  - `?notify` and `?subscribe` now accepts other users.
+
+### Changes
+
+This update contains mostly internal changes.
+  - Implemented support for the new discord.py v1.1.1.
+  - Improved help text for most commands.
+  - Completely revamped help command, few user changes.
+  - Removed abc (internal).
 
 # v2.20.0
 
